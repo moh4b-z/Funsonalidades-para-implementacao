@@ -1,0 +1,24 @@
+/* Adicione suas regras de estilo aqui */
+
+/* Defina a paleta de cores */
+:root {
+    --cor-primaria: #99cee6;
+    --cor-secundaria: #375899;
+}
+
+#titulo {
+    font-size: 36px;
+    animation: mudarCor 5s infinite;
+}
+
+@keyframes mudarCor {
+    0% {
+        color: var(--cor-primaria);
+    }
+    50% {
+        color: var(--cor-secundaria);
+    }
+    100% {
+        color: var(--cor-primaria);
+    }
+}

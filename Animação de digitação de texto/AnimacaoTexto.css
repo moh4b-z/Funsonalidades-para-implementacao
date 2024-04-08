@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1228;
+    overflow-x: hidden; /* Impede que o conteúdo saia dos limites laterais da tela */
+}
+
+.txt-ani {
+    font-size: 40px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.txt-ani sapn{
+    position: relative;
+}
+
+.txt-ani span::before {
+    content: "";
+    position: absolute;
+    color: #d31818;
+    animation: palavras 15s infinite;
+}
+
+
+.txt-ani span::after {
+    content: "";
+    height: 100%;
+    border-left: 2px solid #d31818;
+    margin-left: 3px;
+    animation: cursor 1.5s infinite;
+    opacity: 1;
+    width: 100%;
+}
+
+@keyframes cursor {
+    0%, 50% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes palavras{
+    0%,20% {
+        content: "       de Desenvolvimento Web";
+    }
+
+    21%,40% {
+        content: "         de Automatização de Servico";
+    }
+
+    41%,60% {
+        content: "     com IAs";
+    }
+
+    61%,80% {
+        content: "    Mobiles";
+    }
+
+    80%,100% {
+        content: "  de Jogos";
+    }
+}
